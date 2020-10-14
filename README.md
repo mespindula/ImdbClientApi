@@ -1,6 +1,7 @@
 # ImdbClientApi
 
-	Is an application executed from a .jar file whose objective is to listen on the TCP port through a socket and consult on the IMDB titles of films and series according to the search performed by the client
+	Is an application executed from a .jar file whose objective is to listen on the TCP port through a socket 
+	and consult on the IMDB titles of films and series according to the search performed by the client
 
 # Technology
 	Java 8
