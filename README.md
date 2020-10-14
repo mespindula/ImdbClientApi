@@ -20,7 +20,7 @@
 	Command prompt will show something like 'listening at port 5050'
 	
 # To Use
-	Send the command via client socket. Ex.: <query length>:<query>
+	Send the command via client socket at port 5050. Ex.: <query length>:<query>
 	The return could be:
 		- In case of success <payload length>:<payload>
 		- No results: when there is no result in the query
