@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.apache.commons:commons-lang3:3.3.2'
+
+    testImplementation 'junit:junit:4.12'
+    testCompile 'junit:junit:4.12'
+    
+	compile group: 'log4j', name: 'log4j', version: '1.2.16'
+}
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'br.com.imdb.ImdbClient'
+    }
+    baseName = project.name
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
